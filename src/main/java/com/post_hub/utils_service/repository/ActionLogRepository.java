@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
 import java.util.Optional;
 
-public interface ActionLogoRepository extends JpaRepository<ActionLog, Integer>, JpaSpecificationExecutor<ActionLog> {
+public interface ActionLogRepository extends JpaRepository<ActionLog, Integer>, JpaSpecificationExecutor<ActionLog> {
     Optional<ActionLog> findByIdAndUserId(Integer logId, Integer userId);
 }
