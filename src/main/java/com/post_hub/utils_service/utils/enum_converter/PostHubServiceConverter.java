@@ -1,0 +1,16 @@
+package com.post_hub.utils_service.utils.enum_converter;
+
+import com.post_hub.utils_service.model.enums.PostHubService;
+import jakarta.persistence.AttributeConverter;
+
+public class PostHubServiceConverter implements AttributeConverter<PostHubService, String> {
+    @Override
+    public String convertToDatabaseColumn(PostHubService attribute) {
+        return attribute.getValue();
+    }
+
+    @Override
+    public PostHubService convertToEntityAttribute(String dbData) {
+        return PostHubService.fromValue(dbData);
+    }
+}
